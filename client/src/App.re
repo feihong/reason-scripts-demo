@@ -1,5 +1,7 @@
 [%bs.raw {|require('./App.css')|}];
 
+Random.self_init()
+
 open Belt;
 
 let str = ReasonReact.string;

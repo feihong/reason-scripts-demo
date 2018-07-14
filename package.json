@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "server": "nodemon server.js",
-    "client:watch": "cd client; yarn start",
-    "start": "npm-run-all --parallel server client:watch"
+    "client:server": "cd client && yarn start",
+    "start": "npm-run-all --parallel server client:server",
+    "build": "cd client && yarn build",
+    "deploy":  "yarn build && source .env && rsync -avz --delete build/ $SERVER_DEPLOY_PATH"
   },
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "emojione": "^3.1.7",
     "express": "^4.16.3"
   }
