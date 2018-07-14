@@ -1,0 +1,14 @@
+{
+  "name": "reason-scripts-demo",
+  "version": "0.0.1",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client:watch": "cd client; yarn start",
+    "start": "npm-run-all --parallel server client:watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "emojione": "^3.1.7",
+    "express": "^4.16.3"
+  }
+}
